@@ -1,0 +1,244 @@
+/* Matrix style for WampServer */
+/* by https://github.com/bambi1013/wampthemes */
+
+:root {
+	--shadow_color: #328d3a;
+	--background_box: #eee;
+	--link_color: #235e28;
+	--link_color_hover: #41b049;
+	--background_image: url('img/bg_matrix01.jpg');
+	--border_color: #3eb24a;
+}
+
+* {margin: 0;padding: 0;}
+
+body {
+	background: var(--background_image);
+	background-size: cover;
+	margin: 2em 3em;
+	padding: 1em 3em;
+	font: 80%/1.4 tahoma, arial, helvetica, lucida sans, sans-serif;
+	border: 2px solid var(--border_color);
+	position: relative;
+	box-shadow: 5px 5px 5px var(--border_color);
+}
+
+/*Titre Wampserver*/
+abbr {
+	font-variant: none;
+	border:none;
+	text-decoration:none;
+	font-size: medium;
+	text-shadow: 2px 2px 5px var(--shadow_color);
+}
+
+/*Bandeau haut*/
+.innerhead {
+	border-bottom: 1px solid #999;
+	padding-left:8em;
+	height: 70px;
+	background-color: var(--background_box);
+	background-image: url("img/gifLogo1.gif");
+	background-position-y: 0.4em;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+	box-shadow: 5px 5px 5px var(--shadow_color);
+}
+
+/*zone configuration serveur*/
+.innerconfig {
+	padding-left: 0.5em;
+	background-color: var(--background_box);
+	opacity: 0.9;
+	box-shadow: 5px 5px 5px var(--shadow_color);
+}
+
+.innerconfig h2 {
+	text-shadow: 2px 2px 5px var(--shadow_color);
+}
+
+/*Version, langue, template*/
+.utility {
+	position: absolute;
+	right: 5em;
+	top: 50px;
+	font-size: 0.85em;
+}
+
+.utility li {
+	display: inline;
+	padding:0;
+	margin:0;
+}
+
+h2 {
+	margin: 0.8em 0 0 0;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#head ul li, dl ul li, #foot li {
+	list-style: none;
+	display: inline;
+	margin: 0;
+	/*padding: 0 0.4em;*/
+}
+
+ul.aliases, ul.projects, ul.tools, ul.vhost {
+	list-style: none;
+	line-height: 23px;
+}
+
+ul.projects {
+	max-width:230px;
+}
+
+ul.aliases a, ul.projects a, ul.tools a ,ul.vhost a {
+	padding-left: 22px;
+	background: url('img/pngFolder.png') 0 100% no-repeat;
+}
+
+ul.tools a {
+	background: url('img/pngWrench.png') 0 100% no-repeat;
+}
+
+ul.aliases a, ul.vhost a {
+	background: url('img/pngFolderGo.png') 0 100% no-repeat;
+}
+
+li.projectsdir, li.phpmynot {
+	line-height:95%;
+	font-size: 0.72em;
+	color: #063f1d;
+	margin-top:10px;
+	padding-right:15px;
+}
+
+li.phpmynot {
+	margin:0;
+	padding:0 0 0 22px;
+	white-space:nowrap;
+	color:red;
+	font-weight: bold;
+}
+
+dl {
+	margin: 0;
+	padding: 0;
+}
+
+dt {
+	font-weight: bold;
+	text-align: right;
+	width: 15em;
+	clear: both;
+}
+
+dd {
+	margin: -1.35em 0 0 16em;
+	padding-bottom: 0.4em;
+	overflow: auto;
+}
+dd ul li {
+	float: left;
+	display: block;
+	width: 16.5%;
+  min-width: 140px;
+	margin: 0;
+	padding: 0 0 0 20px;
+	background: url('img/pngPlugin.png') 2px 50% no-repeat;
+	line-height: 1.35;
+}
+
+dd.ddphpext {
+	margin-left:1.5em;
+}
+
+dd small {
+	color: black !important;
+}
+
+ul.phpext {
+	margin-top:1.5em;
+}
+
+ul.phpext li {
+	width: 6%;
+  min-width: 100px;
+}
+
+.divider1 {
+   border-top:1px solid #999;
+}
+
+.divider2 {
+    clear:both;
+}
+
+a {
+	color: var(--link_color);
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--link_color_hover);
+	text-decoration: underline;
+}
+
+#foot, #error {
+	text-align: center;
+	margin-top: 1.8em;
+	padding: 0.3em;
+	font-size: 0.85em;
+	background-color: var(--background_box);
+	opacity: 0.9;
+	box-shadow: 5px 5px 5px var(--shadow_color);
+}
+
+.column {
+    min-width: 220px;
+	margin: 0.5em;
+	padding-left: 0.5em;
+    float:left;
+	background-color: var(--background_box);
+	opacity: 0.9;
+	box-shadow: 5px 5px 5px var(--shadow_color);
+}
+
+.column h2 {
+	text-shadow: 2px 2px 5px var(--shadow_color);
+}
+
+.three-columns .column {
+    min-width: 32%;
+}
+.four-columns .column {
+    min-width: 23%;
+}
+
+pre {
+ white-space:pre-wrap;
+ overflow-x:auto;
+ font-size:1.4em;
+ border: 1px solid #999;
+ padding:1em;
+}
+
+@media screen and (max-width: 750px) {
+    dt {
+    	text-align: left;
+    	width: 100%;
+    	clear: left;
+        margin: 2% 0 0 0;
+    }
+
+    dd {
+    	margin: 0;
+    	padding: 0.5% 1.5% 1% 1.5%;
+    }
+}
